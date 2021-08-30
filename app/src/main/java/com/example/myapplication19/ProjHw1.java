@@ -62,7 +62,7 @@ public class ProjHw1 extends AppCompatActivity {
     private BarDataSet set1, set2, set3, set4, set5;
 
     private BarChart barChart;
-    private ArrayList<Integer> colors;
+    private ArrayList<Integer> colors=new ArrayList<>();;
 
     // variable for our bar data.
     private BarData barData;
@@ -161,13 +161,6 @@ public class ProjHw1 extends AppCompatActivity {
         year=(RadioButton)findViewById(R.id.yearradioButton);
 
 
-        colors=new ArrayList<>();
-
-        colors.add(Color.BLUE);
-        colors.add(Color.YELLOW);
-        colors.add(Color.GREEN);
-        colors.add(Color.RED);
-        colors.add(Color.BLACK);
 
         week.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -290,26 +283,21 @@ public class ProjHw1 extends AppCompatActivity {
 
 
 
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(0))),
-                                        Color.BLUE));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(1))),
-                                        Color.YELLOW));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(2))),
-                                        Color.GREEN));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(3))),
-                                        Color.RED));
+                      colors=new ArrayList<Integer>();
+
+                        colors.add(Color.BLUE);
+                        colors.add(Color.YELLOW);
+                        colors.add(Color.GREEN);
+                        colors.add(Color.RED);
+                        colors.add(Color.BLACK);
+                        for (int i=0;i<responseFromAPI.size();i++) {
+
+                            pieChart3.addPieSlice(
+                                    new PieModel(
+                                            "Python",
+                                            Integer.parseInt(Integer.toString(responseFromAPI.get(i))),
+                                           colors.get(i)));
+                        }
                         //pieChart3.addPieSlice(
                           //      new PieModel(
                             //            "Python",
@@ -653,32 +641,21 @@ public class ProjHw1 extends AppCompatActivity {
 
 
 
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(0))),
-                                        Color.BLUE));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(1))),
-                                        Color.YELLOW));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(2))),
-                                        Color.GREEN));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(3))),
-                                        Color.RED));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(4))),
-                                        Color.BLACK));
+                        colors=new ArrayList<Integer>();
 
+                        colors.add(Color.BLUE);
+                        colors.add(Color.YELLOW);
+                        colors.add(Color.GREEN);
+                        colors.add(Color.RED);
+                        colors.add(Color.BLACK);
+                        for (int i=0;i<responseFromAPI.size();i++) {
+
+                            pieChart3.addPieSlice(
+                                    new PieModel(
+                                            "Python",
+                                            Integer.parseInt(Integer.toString(responseFromAPI.get(i))),
+                                           colors.get(i)));
+                        }
 
                     }
                     @Override
@@ -826,31 +803,21 @@ public class ProjHw1 extends AppCompatActivity {
                          */
 
 
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(0))),
-                                        Color.BLUE));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(1))),
-                                        Color.YELLOW));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(2))),
-                                        Color.GREEN));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(3))),
-                                        Color.RED));
-                        pieChart3.addPieSlice(
-                                new PieModel(
-                                        "Python",
-                                        Integer.parseInt(Integer.toString(responseFromAPI.get(4))),
-                                        Color.BLACK));
+                        colors=new ArrayList<Integer>();
+
+                        colors.add(Color.BLUE);
+                        colors.add(Color.YELLOW);
+                        colors.add(Color.GREEN);
+                        colors.add(Color.RED);
+                        colors.add(Color.BLACK);
+                        for (int i=0;i<responseFromAPI.size();i++) {
+
+                            pieChart3.addPieSlice(
+                                    new PieModel(
+                                            "Python",
+                                            Integer.parseInt(Integer.toString(responseFromAPI.get(i))),
+                                           colors.get(i)));
+                        }
 
                     }
                     @Override
